@@ -25,18 +25,20 @@ public class SystemMain01 {
 	public static void main(String[] args) {
 		System.out.println("---SHOW DATA---");
 
-		Member member = new Member();
+		Member member1 = new Member();
 
-		member.name = "Miura Manabu";
-		member.age = 24;
-		member.rank = 1;
+		member1.name = "Miura Manabu";
+		member1.age = 24;
+		member1.rank = 1;
 
-		member.showMember();
+		member1.showMember();
 
-		member.name = "Sato Kensuke";
-		member.age = 36;
-		member.rank = 2;
+		Member member2 = new Member();
 
-		member.showMember();
+		member2.name = "Sato Kensuke";
+		member2.age = 36;
+		member2.rank = 2;
+
+		member2.showMember();
 	}
 }
