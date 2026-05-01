@@ -5,13 +5,11 @@ import java.util.List;
 
 /**
  * 整数リストを制御するクラス
- * 
  */
 class NumberList {
 
 	/**
 	 * 整数のList
-	 * 
 	 */
 	private List<Integer> numbers = new ArrayList<>();
 
@@ -21,8 +19,10 @@ class NumberList {
 	 * @param limit（Listの最終要素）
 	 */
 	public void addFromOneTo(Integer limit) {
-		//TODO ここから実装する
-
+		// limitが0以下の場合、ループは実行されず空のままになります
+		for (int i = 1; i <= limit; i++) {
+			numbers.add(i);
+		}
 	}
 
 	/**
@@ -32,8 +32,10 @@ class NumberList {
 	 */
 	public Integer calcSumOfList() {
 		Integer sum = 0;
-		//TODO ここから実装する
-
+		// 拡張for文（foreach）を使って全要素を足し合わせる
+		for (Integer num : numbers) {
+			sum += num;
+		}
 		return sum;
 	}
 
@@ -42,7 +44,11 @@ class NumberList {
 	 * 
 	 */
 	public void doubleListEachValue() {
-		//TODO ここから実装する
+		// インデックスを使って値を更新するため、通常のfor文を使用します
+		for (int i = 0; i < numbers.size(); i++) {
+			// 現在の値を取得し、2倍にして同じインデックスにセットし直す
+			numbers.set(i, numbers.get(i) * 2);
+		}
 	}
 
 	/**
@@ -50,8 +56,13 @@ class NumberList {
 	 * 要素数が奇数の場合、中央値は残す
 	 */
 	public void removeIndexOfFirstHalf() {
-		//TODO ここから実装する
+		// 削除する個数を計算 (奇数の場合は切り捨てられるため、中央値は残ります)
+		int removeCount = numbers.size() / 2;
 
+		// 先頭の要素(インデックス0)を removeCount 回削除する
+		for (int i = 0; i < removeCount; i++) {
+			numbers.remove(0);
+		}
 	}
 
 	/**
@@ -67,5 +78,4 @@ class NumberList {
 	public void setNumbers(List<Integer> numbers) {
 		this.numbers = numbers;
 	}
-
 }
