@@ -5,9 +5,11 @@ class MemberManager {
 	/**
 	 * インスタンス化の禁止
 	 */
-	private MemberManager() {
+
+	public static void showAllMembers(Member[] members) {
+		for (int i = 0; i < members.length; i++) {
+
+			members[i].showMember();
+		}
 	}
-
-	//TODO showAllMembersメソッドを実装する
-
 }

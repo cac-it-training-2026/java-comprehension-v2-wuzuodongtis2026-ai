@@ -73,7 +73,7 @@ public class MemberTest03 {
 	private static void testParameterizedConstructor() {
 		System.out.println("\n▶ テストケース2: パラメータ付きコンストラクタのテスト");
 
-		// パラメータ付きコンストラクタでインスタンスを作成
+		// パラメータ付きコンストラクタでインスタンスを作成z
 		String testName = "山田太郎";
 		int testAge = 30;
 		int testRank = 2;
