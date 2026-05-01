@@ -35,7 +35,7 @@ public class Member extends AbstMember {
 	}
 
 	public int getAge() {
-		return age;
+		return age;//1
 	}
 
 	public void setAge(int age) {
